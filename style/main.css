@@ -4,3 +4,174 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+:root {
+  --white: #fff;
+
+  --lightgray: #f2f2f2;
+  --darkgray: #808080;
+  --darkmode: #333333;
+  --primairy: #0071bc;
+  --secondairy: #063b59;
+
+  --headtext: "Nunito", sans-serif;
+  --bodytext: "Open Sans", sans-serif;
+}
+
+html {
+  background-color: var(--white);
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* SECTION CONTAINERS  */
+header {
+  width: min(60rem, 90%);
+  /* background: aliceblue; */
+  margin: 3rem auto 0 auto;
+}
+
+main {
+  width: 100vw;
+  /* background: aliceblue; */
+  margin: 0 auto 1rem auto;
+  padding-top: 2rem;
+}
+
+.width-container {
+  width: min(50rem, 80%);
+  margin: 0 auto 1rem auto;
+  position: relative;
+}
+
+/* FONTS and TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headtext);
+  color: var(--primairy);
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: var(--bodytext);
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}
+
+/* THE REST  */
+.logo {
+  width: 20rem;
+}
+
+/* wie ben ik section  */
+.portret {
+  margin-top: 5rem;
+  width: 30rem;
+  height: 15rem;
+  background: var(--secondairy);
+  background: linear-gradient(
+    135deg,
+    var(--primairy) 0%,
+    var(--secondairy) 100%
+  );
+  border-radius: 0% 0% 0% 0%;
+  position: absolute;
+  right: -24rem;
+
+  & img {
+    height: 150%;
+    position: absolute;
+    top: -7.5rem;
+    left: 0rem;
+    z-index: 2;
+    /* clip-path: ellipse(50% 45% at 45% 55%); */
+    /* background-color: green; */
+  }
+}
+
+.monnica {
+  margin-top: 10rem;
+}
+
+.overlap {
+  float: right;
+  width: 7rem;
+  height: 11rem;
+  margin: 0 0 0.5rem 1rem;
+  /* border-radius: 50%; */
+  shape-outside: rect();
+  background-color: var(--secondairy);
+}
+
+/* Taken section  */
+.taken {
+  height: 25rem;
+  background-color: var(--lightgray);
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.taak {
+  width: 10rem;
+  height: 20rem;
+  background-color: var(--darkgray);
+  margin-top: 1rem;
+}
+
+/* BUTTONS  */
+.h-h-button {
+  background-color: var(--secondairy);
+  position: relative;
+  height: 3rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: var(--white);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  & .h-h-icon {
+    background-color: var(--primairy);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -3rem;
+
+    & svg {
+      width: 60%;
+    }
+
+    & .heart,
+    .hand {
+      fill: var(--white);
+    }
+
+    & .heartin {
+      fill: var(--white);
+      transition: fill 0.5s ease;
+    }
+  }
+}
+
+.h-h-button:hover {
+  filter: drop-shadow(3px 3px 7px #000000);
+
+  & .heartin {
+    fill: #9d0000;
+  }
+}
