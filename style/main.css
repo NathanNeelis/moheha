@@ -109,21 +109,161 @@ p {
 }
 
 /* Taken section  */
-.taken {
-  height: 25rem;
-  background-color: var(--lightgray);
+.werkzaamheden {
+  background-color: var(--secondairy);
   margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & h2 {
+    width: min(50rem, 80%);
+    margin: 1rem auto 1.5rem auto;
+    color: var(--white);
+  }
+}
+
+.taken {
+  width: min(50rem, 80%);
+  margin: auto;
+  background-color: var(--secondairy);
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .taak {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    & h4 {
+      text-align: center;
+      line-height: 1.4rem;
+      padding: 1rem 0;
+      font-size: 1.3rem;
+      color: var(--white);
+    }
+
+    .taakicon {
+      width: 8.3rem;
+      height: 9.3rem;
+      border-radius: 0.6rem;
+      border: 0.15rem solid var(--secondairy);
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease;
+      transition: filter 0.3s ease;
+
+      & img {
+        width: 60%;
+      }
+
+      & svg {
+        width: 60%;
+      }
+    }
+
+    .st2 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: var(--secondairy);
+      transition: fill 0.3s ease;
+    }
+
+    .st4 {
+      fill: var(--darkgray);
+    }
+
+    .active {
+      background: var(--primairy);
+      background: linear-gradient(
+        135deg,
+        var(--primairy) 0%,
+        var(--secondairy) 100%
+      );
+      border: 0.15rem solid var(--white);
+
+      filter: drop-shadow(0px 0px 7px #031d28);
+
+      .st2 {
+        fill: var(--white);
+      }
+    }
+  }
 }
 
-.taak {
-  width: 10rem;
-  height: 20rem;
-  background-color: var(--darkgray);
-  margin-top: 1rem;
+.taak:hover {
+  .taakicon {
+    background: var(--primairy);
+    border: 0.15rem solid var(--white);
+    filter: drop-shadow(0px 0px 7px #031d28);
+  }
+
+  .st2 {
+    fill: var(--white);
+  }
+}
+
+.beschrijving {
+  display: flex;
+  align-items: flex-start;
+  width: min(50rem, 80%);
+  margin: 0.5rem auto 1.5rem auto;
+  color: white;
+
+  & span {
+    font-weight: 700;
+  }
+}
+
+/* Helpende hand aanvragen  */
+.aanvragen {
+  margin: 5rem 0;
+
+  .aanvragen-content {
+    margin-bottom: 2rem;
+  }
+
+  .aanvraagproces-illustratie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    position: relative;
+    margin: 4rem 0;
+
+    .step {
+      width: 8rem;
+      z-index: 10;
+    }
+
+    & h4 {
+      text-align: center;
+      line-height: 1.4rem;
+      font-size: 1.3rem;
+      color: var(--secondairy);
+    }
+  }
+}
+
+.aanvraagproces-illustratie::after {
+  content: "";
+  width: 98%;
+  height: 0.3rem;
+  background-color: var(--lightgray);
+  position: absolute;
+  bottom: 56%;
+  z-index: 1;
 }
 
 /* BUTTONS  */
