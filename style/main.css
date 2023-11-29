@@ -13,9 +13,14 @@
   --darkmode: #333333;
   --primairy: #0071bc;
   --secondairy: #063b59;
+  --tertiary: #50a383;
 
   --headtext: "Nunito", sans-serif;
   --bodytext: "Open Sans", sans-serif;
+
+  --psize: 1rem;
+  --h2size: 1.5rem;
+  --plineheight: 1.6rem;
 }
 
 html {
@@ -27,13 +32,11 @@ html {
 /* SECTION CONTAINERS  */
 header {
   width: min(60rem, 90%);
-  /* background: aliceblue; */
   margin: 3rem auto 0 auto;
 }
 
 main {
   width: 100vw;
-  /* background: aliceblue; */
   margin: 0 auto 1rem auto;
   padding-top: 2rem;
 }
@@ -54,13 +57,18 @@ h4 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: var(--h2size);
 }
 
 p {
   font-family: var(--bodytext);
-  font-size: 1.2rem;
-  line-height: 1.9rem;
+  font-size: var(--psize);
+  line-height: var(--plineheight);
+}
+
+ul {
+  font-family: var(--bodytext);
+  list-style-position: inside;
 }
 
 /* THE REST  */
@@ -71,7 +79,7 @@ p {
 /* wie ben ik section  */
 .portret {
   margin-top: 5rem;
-  width: 30rem;
+  /* width: 30rem; */
   height: 15rem;
   background: var(--secondairy);
   background: linear-gradient(
@@ -80,25 +88,24 @@ p {
     var(--secondairy) 100%
   );
   border-radius: 0% 0% 0% 0%;
-  position: absolute;
-  right: -24rem;
+  position: relative;
 
   & img {
     height: 150%;
     position: absolute;
-    top: -7.5rem;
-    left: 0rem;
+    bottom: 0;
+    left: 10%;
     z-index: 2;
-    /* clip-path: ellipse(50% 45% at 45% 55%); */
-    /* background-color: green; */
   }
 }
 
 .monnica {
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 
 .overlap {
+  display: none;
+
   float: right;
   width: 7rem;
   height: 11rem;
@@ -137,7 +144,7 @@ p {
   flex-wrap: wrap;
 
   .taak {
-    width: 10rem;
+    width: 7rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -146,8 +153,8 @@ p {
     & h4 {
       text-align: center;
       line-height: 1.4rem;
-      padding: 1rem 0;
-      font-size: 1.3rem;
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
       color: var(--white);
     }
 
@@ -235,8 +242,8 @@ p {
 
   .aanvraagproces-illustratie {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 3rem;
     position: relative;
@@ -245,6 +252,13 @@ p {
     .step {
       width: 8rem;
       z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & img {
+        transform: rotate(90deg);
+      }
     }
 
     & h4 {
@@ -258,12 +272,75 @@ p {
 
 .aanvraagproces-illustratie::after {
   content: "";
-  width: 98%;
-  height: 0.3rem;
+  width: 0.3rem;
+  height: 90%;
+  left: 3.75rem;
+
   background-color: var(--lightgray);
   position: absolute;
-  bottom: 56%;
+
   z-index: 1;
+}
+
+.step1,
+.step2,
+.step3,
+.step4 {
+  position: relative;
+}
+
+.step4 {
+  & img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87%;
+    margin-left: 6.5%;
+  }
+}
+
+.step1::after {
+  content: "";
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  background-image: url("/images/stap1_icon.svg");
+  background-repeat: no-repeat;
+  top: 1.8rem;
+  left: 2.4rem;
+}
+
+.step2::after {
+  content: "";
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  background-image: url("/images/stap2_icon.svg");
+  background-repeat: no-repeat;
+  top: 1.8rem;
+  left: 2.4rem;
+}
+
+.step3::after {
+  content: "";
+  width: 3.6rem;
+  height: 3.6rem;
+  position: absolute;
+  background-image: url("/images/stap3_icon.svg");
+  background-repeat: no-repeat;
+  top: 1.6rem;
+  left: 2.4rem;
+}
+
+.step4::after {
+  content: "";
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  background-image: url("/images/stap4_icon.svg");
+  background-repeat: no-repeat;
+  top: 1.8rem;
+  left: 2.4rem;
 }
 
 /* BUTTONS  */
@@ -271,11 +348,12 @@ p {
   background-color: var(--secondairy);
   position: relative;
   height: 3rem;
-  width: 20rem;
+  width: 18rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  padding: 0 0 0rem 1.5rem;
   color: var(--white);
   border-radius: 0.3rem;
   cursor: pointer;
@@ -290,7 +368,7 @@ p {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: -3rem;
+    left: -2rem;
 
     & svg {
       width: 60%;
@@ -313,5 +391,164 @@ p {
 
   & .heartin {
     fill: #9d0000;
+  }
+}
+
+/* footer  */
+
+footer {
+  width: 100vw;
+  background-color: var(--secondairy);
+  padding-bottom: 5rem;
+  margin-top: 10rem;
+
+  & section {
+    width: min(50rem, 80%);
+    margin: auto;
+
+    .footerlogo {
+      width: 15rem;
+      padding: 3rem 0 1rem 0;
+    }
+  }
+
+  .footerdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    gap: 1rem;
+
+    & h4 {
+      font-size: 1.1rem;
+      color: white;
+      padding: 1.3rem 0 0.3rem 0;
+    }
+
+    & p,
+    & ul {
+      font-size: 0.85rem;
+      line-height: 1.3rem;
+      font-weight: 100;
+    }
+
+    & div {
+      width: 80%;
+    }
+
+    & a {
+      text-decoration: none;
+      font-family: var(--bodytext);
+      font-size: 0.85rem;
+      line-height: 1.3rem;
+      font-weight: 100;
+      color: white;
+      display: block;
+    }
+
+    & a:hover {
+      color: var(--tertiary);
+      text-decoration: underline;
+    }
+  }
+}
+
+/* media queries  */
+
+@media all and (min-width: 50rem) {
+  :root {
+    --psize: 1.2rem;
+    --h2size: 1.8rem;
+    --plineheight: 1.9rem;
+  }
+
+  .portret {
+    position: absolute;
+    right: -24rem;
+    width: 30rem;
+  }
+
+  .overlap {
+    display: flex;
+  }
+
+  .h-h-button {
+    padding: 0;
+    width: 20rem;
+
+    .h-h-icon {
+      left: -3rem;
+    }
+  }
+
+  .monnica {
+    margin-top: 10rem;
+  }
+
+  /* taken  */
+  .taak {
+    width: 10rem;
+
+    & h4 {
+      text-align: center;
+      line-height: 1.4rem;
+      padding: 1rem 0;
+      font-size: 1.3rem;
+      color: var(--white);
+    }
+  }
+
+  /* aanvragen  */
+  .aanvragen {
+    .aanvraagproces-illustratie {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      position: relative;
+      margin: 4rem 0;
+
+      .step {
+        flex-direction: column;
+        & img {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .aanvraagproces-illustratie::after {
+      content: "";
+      width: 90%;
+      height: 0.3rem;
+      bottom: 6.15rem;
+    }
+  }
+
+  .step1::after,
+  .step2::after {
+    top: 2.4rem;
+    left: 1.8rem;
+  }
+
+  .step3::after {
+    top: 2rem;
+    left: 1.8rem;
+  }
+
+  .step4::after {
+    top: 1.8rem;
+    left: 2.6rem;
+  }
+
+  /* footer  */
+  footer {
+    .footerdetails {
+      flex-direction: row;
+
+      & div {
+        width: min(12rem, 24%);
+      }
+    }
   }
 }

@@ -7,6 +7,7 @@
 
     <!-- CSS  -->
     <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/form.css" />
 
     <!-- Favicon -->
     <!-- <link rel="icon" href="images/favicon.png" type="image/x-icon" /> -->
@@ -51,7 +52,6 @@
         <!-- button  -->
         <div class="h-h-button">
           <div class="h-h-icon">
-            <!-- <img src="images/icon_hand.svg" alt="icon hand with heart" /> -->
             <svg
               x="0"
               y="0"
@@ -229,19 +229,19 @@
           <article class="aanvraagproces-illustratie">
             <!-- illustratie proces  -->
             <div class="step step1">
-              <img src="images/stap1.svg" alt="stap 1 aanvragen" />
+              <img src="images/bubble_green.svg" alt="stap 1 aanvragen" />
               <h4>aanvragen</h4>
             </div>
             <div class="step step2">
-              <img src="images/stap2.svg" alt="stap 2 wachtlijst" />
+              <img src="images/bubble_gray.svg" alt="stap 2 wachtlijst" />
               <h4>wachtlijst</h4>
             </div>
             <div class="step step3">
-              <img src="images/stap3.svg" alt="stap 3 kennismaking" />
+              <img src="images/bubble_gray.svg" alt="stap 3 kennismaking" />
               <h4>kennismaking</h4>
             </div>
             <div class="step step4">
-              <img src="images/stap4.svg" alt="stap 4 start" />
+              <img src="images/bubble_gray_last.svg" alt="stap 4 start" />
               <h4>start</h4>
             </div>
           </article>
@@ -255,10 +255,196 @@
               niet voorzien van een tijdsindicatie.
             </p>
           </article>
-
-          <!-- aanvraag formulier  -->
         </section>
       </div>
+
+      <!-- aanvraag formulier  -->
+      <section class="aanvraagformulier">
+        <h2>Aanvraag formulier</h2>
+        <p>
+          Met dit formulier schrijft u zich in op de wachtlijst voor een
+          helpende hand bij huishuidelijke taken.
+        </p>
+
+        <form action="/" method="POST" id="my-form">
+          <!-- persoonlijke gegevens -->
+          <fieldset class="persoonlijke-gegevens">
+            <legend>Persoonlijke gegevens</legend>
+            <div class="formfield-container name">
+              <div class="formfield firstname">
+                <label for="firstname"> Voornaam</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <div class="formfield lastname">
+                <label for="lastname"> Achternaam</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="formfield-container street">
+              <div class="formfield">
+                <label for="street"> Straat</label>
+                <input
+                  type="text"
+                  name="street"
+                  id="street"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <div class="formfield housenumber">
+                <label for="housenumber"> Huisnummer</label>
+                <input
+                  type="text"
+                  name="housenumber"
+                  id="housenumber"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="formfield-container adres">
+              <div class="formfield postcode">
+                <label for="postcode"> Postcode</label>
+                <input
+                  type="text"
+                  name="postcode"
+                  id="postcode"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <div class="formfield city">
+                <label for="city"> Plaats</label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="formfield-container birthdate">
+              <div class="formfield">
+                <label for="birthdate"> Geboorte datum</label>
+                <input
+                  type="date"
+                  name="birthdate"
+                  id="birthdate"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- contact details  -->
+          </fieldset>
+          <fieldset class="contact-details">
+            <legend>Contact details</legend>
+            <div class="formfield-container phone">
+              <div class="formfield">
+                <label for="phone"> Telefoonnummer</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="formfield-container email">
+              <div class="formfield">
+                <label for="email"> E-mailadres</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="formfield-container voorwaarden">
+              <div class="checkfield">
+                <input
+                  type="checkbox"
+                  name="voorwaarden"
+                  id="voorwaarden"
+                  required
+                />
+
+                <label for="voorwaarden">
+                  Ik ga akkoord met de
+                  <a href="/">algemene voorwaarden</a> en de daarbijhorende
+                  <a href="/">privacy verklaring</a>.
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" name="send" id="send" value="Send">
+            Verstuur aanvraag
+          </button>
+        </form>
+      </section>
     </main>
+
+    <footer>
+      <section>
+        <div class="footerlogo">
+          <img src="logo/moheha_logo_diap.svg" alt="logo moheha" />
+        </div>
+
+        <article class="footerdetails">
+          <div class="footer-contactinformation">
+            <h4>moheha</h4>
+            <p>KVK 88074234</p>
+            <p>Minervalaan 27</p>
+            <p>7321 DP APELDOORN</p>
+
+            <h4>Contact</h4>
+            <p>+31 6 41885487</p>
+            <p>contact@moheha.nl</p>
+          </div>
+
+          <div class="footer-werkzaamheden">
+            <h4>Werkzaamheden</h4>
+            <ul>
+              <li>Huishoudelijke werk</li>
+              <li>Tuin werk</li>
+              <li>Koken</li>
+              <li>Persoonlijk contact</li>
+            </ul>
+          </div>
+
+          <div class="sitemap">
+            <h4>Sitemap</h4>
+            <a href="/">Algemene voorwaarden</a>
+            <a href="/">Aanvraag formulier</a>
+            <a href="/">Contact formulier</a>
+            <a href="/">Privacy verklaring</a>
+            <a href="/">Veel gestelde vragen</a>
+          </div>
+        </article>
+      </section>
+    </footer>
   </body>
 </html>

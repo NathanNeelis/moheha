@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.Slagschaduw{fill:none;}
+	.Buitenste_x0020_gloed_x0020_5_x0020_pt{fill:none;}
+	.Blauw_x0020_neon{fill:none;stroke:#8AACDA;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+	.Hooglicht_x002C__x0020_chroom{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.3629;stroke-miterlimit:1;}
+	.Jive_AS{fill:#FFDD00;}
+	.Alyssa_AS{fill:#A6D0E4;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#063B59;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-45" y1="-45" x2="-45" y2="-46">
+	<stop  offset="0" style="stop-color:#656565"/>
+	<stop  offset="0.618" style="stop-color:#1B1B1B"/>
+	<stop  offset="0.6292" style="stop-color:#545454"/>
+	<stop  offset="0.9831" style="stop-color:#3E3E3E"/>
+</linearGradient>
+<g>
+	<path class="st0" d="M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0z M30,2.8C45,2.8,57.2,15,57.2,30
+		S45,57.2,30,57.2S2.8,45,2.8,30S15,2.8,30,2.8z M28.9,30.9c-0.3-0.3-0.3-0.6-0.3-0.9V12.8c0-0.8,0.6-1.5,1.5-1.5
+		c0.9,0,1.5,0.6,1.5,1.5v16.6l11.7,11.7c0.5,0.5,0.5,1.5,0,2c-0.5,0.5-1.5,0.5-2,0C41.1,43.1,28.9,30.9,28.9,30.9z"/>
+</g>
+</svg>
