@@ -29,10 +29,16 @@ html {
   width: 100vw;
 }
 
+body {
+  position: relative;
+}
+
 /* SECTION CONTAINERS  */
 header {
   width: min(60rem, 90%);
-  margin: 3rem auto 0 auto;
+  margin: 0 auto 0 auto;
+  padding-top: 3rem;
+  position: relative;
 }
 
 main {
@@ -78,7 +84,7 @@ ul {
 
 /* wie ben ik section  */
 .portret {
-  margin-top: 5rem;
+  margin-top: 7rem;
   /* width: 30rem; */
   height: 15rem;
   background: var(--secondairy);
@@ -352,12 +358,12 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  padding: 0 0 0rem 1.5rem;
+  margin: 2rem auto 0 auto;
   color: var(--white);
   border-radius: 0.3rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  filter: drop-shadow(3px 3px 7px #000000);
 
   & .h-h-icon {
     background-color: var(--primairy);
@@ -368,7 +374,8 @@ ul {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: -2rem;
+    left: 7rem;
+    bottom: -3.3rem;
 
     & svg {
       width: 60%;
@@ -392,6 +399,49 @@ ul {
   & .heartin {
     fill: #9d0000;
   }
+}
+
+/* contact button  */
+.contactBtn {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--white);
+
+  padding-left: 2rem;
+  background: var(--secondairy);
+  font-family: var(--headtext);
+  color: white;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 1003;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contactBtn:hover {
+  transform: scale(104%);
+  filter: drop-shadow(0px 0px 7px #000000);
+}
+
+.contactBtn::after {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  /* background: green; */
+  background-image: url("/images/email.svg");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* footer  */
@@ -462,6 +512,11 @@ footer {
     --plineheight: 1.9rem;
   }
 
+  /* contact  */
+  .contactBtn {
+    display: flex;
+  }
+
   .portret {
     position: absolute;
     right: -24rem;
@@ -475,9 +530,12 @@ footer {
   .h-h-button {
     padding: 0;
     width: 20rem;
+    filter: none;
+    margin: 2rem 0 0 0;
 
     .h-h-icon {
       left: -3rem;
+      bottom: -0.5rem;
     }
   }
 

@@ -27,6 +27,111 @@
   </head>
 
   <body>
+    <div class="contactBtn">Neem contact op</div>
+
+    <section class="contactformulier">
+      <div class="popcontainer">
+        <h2>Neem contact op</h2>
+        <div class="closeform">
+          <svg
+            viewBox="0 0 60 60"
+            style="enable-background: new 0 0 60 60"
+            xml:space="preserve"
+          >
+            <path class="st0" d="m18.4 41.6 23.2-23.2M18.4 18.4l23.2 23.2" />
+          </svg>
+        </div>
+
+        <article class="contactwrapper">
+          <section class="cf-container">
+            <form action="/" method="POST" id="my-form">
+              <fieldset class="contact-opnemen">
+                <legend>Persoonlijke gegevens</legend>
+                <div class="formfield firstname">
+                  <label for="cf-name"> Naam</label>
+                  <input
+                    type="text"
+                    name="cf-name"
+                    id="cf-name"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="formfield">
+                  <label for="cf-email"> E-mailadres</label>
+                  <input
+                    type="email"
+                    name="cf-email"
+                    id="cf-email"
+                    placeholder=""
+                    required
+                  />
+                </div>
+
+                <div class="formfield">
+                  <label for="cf-phone">
+                    Telefoonnummer <span>(optioneel)</span></label
+                  >
+                  <input
+                    type="tel"
+                    name="cf-phone"
+                    id="cf-phone"
+                    placeholder=""
+                    required
+                  />
+                </div>
+
+                <div class="formfield">
+                  <label for="bericht">Bericht</label>
+
+                  <textarea id="bericht" name="bericht"> </textarea>
+                </div>
+              </fieldset>
+
+              <button type="submit" name="cf-send" id="cf-send" value="cf-Send">
+                Verstuur bericht
+              </button>
+            </form>
+          </section>
+
+          <div class="linebreaker"></div>
+
+          <section class="contactinformation">
+            <h4>Contact informatie</h4>
+            <!-- adres gegevens  -->
+            <div class="ci-adres">
+              <!-- icon  -->
+              <img src="/images/location.svg" alt="locatie icoon" />
+              <!-- adres  -->
+              <div class="info">
+                <p>Moheha</p>
+                <p>Minervalaan 27</p>
+                <p>7321 DP APELDOORN</p>
+              </div>
+            </div>
+
+            <div class="ci-telefoon">
+              <!-- icon  -->
+              <img src="/images/phone.svg" alt="telefoon icoon" />
+              <!-- tel  -->
+              <div class="info">
+                <p>+31 6 41885487</p>
+              </div>
+            </div>
+
+            <div class="ci-email">
+              <!-- icon  -->
+              <img src="/images/email.svg" alt="e-mail icoon" />
+              <!-- email  -->
+              <div class="info">
+                <p>contact@moheha.nl</p>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
     <header>
       <div class="logo">
         <img
@@ -446,5 +551,8 @@
         </article>
       </section>
     </footer>
+
+    <!-- SCRIPTS  -->
+    <script src="js/contactform.js"></script>
   </body>
 </html>
