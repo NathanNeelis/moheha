@@ -20,10 +20,23 @@
       rel="stylesheet"
     />
 
+    <!-- for testing purposes  -->
+    <meta name="robots" content="noindex" />
+
+    <!-- email services  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("2_bOqFKzdEfu6Pwop");
+      })();
+    </script>
+
     <!-- Web details  -->
     <title>moheha</title>
-
-    <!-- favicon  -->
   </head>
 
   <body>
@@ -44,7 +57,7 @@
 
         <article class="contactwrapper">
           <section class="cf-container">
-            <form action="/" method="POST" id="my-form">
+            <form action="/" method="POST" id="contact-form">
               <fieldset class="contact-opnemen">
                 <legend>Persoonlijke gegevens</legend>
                 <div class="formfield firstname">
@@ -77,7 +90,6 @@
                     name="cf-phone"
                     id="cf-phone"
                     placeholder=""
-                    required
                   />
                 </div>
 
@@ -89,6 +101,7 @@
               </fieldset>
 
               <button type="submit" name="cf-send" id="cf-send" value="cf-Send">
+                <!-- <button onclick="sendMail()" name="cf-send" id="cf-send"> -->
                 Verstuur bericht
               </button>
             </form>
@@ -155,7 +168,7 @@
         </section>
 
         <!-- button  -->
-        <div class="h-h-button">
+        <a href="#hh-aanvragen" class="h-h-button">
           <div class="h-h-icon">
             <svg
               x="0"
@@ -181,11 +194,11 @@
             </svg>
           </div>
           <p>Een helpende hand aanvragen</p>
-        </div>
+        </a>
 
         <!-- picture  -->
         <div class="portret">
-          <img src="images/nathan.png" alt="Foto van Monnica" />
+          <img src="images/monnica_small.png" alt="Foto van Monnica" />
         </div>
 
         <!-- wie ben ik tekst -->
@@ -316,7 +329,7 @@
 
       <!-- een helpende hand aanvragen  -->
       <div class="width-container">
-        <section class="aanvragen">
+        <section class="aanvragen" id="hh-aanvragen">
           <article class="aanvragen-content">
             <h2>Een helpende hand aanvragen</h2>
             <p>
@@ -364,14 +377,14 @@
       </div>
 
       <!-- aanvraag formulier  -->
-      <section class="aanvraagformulier">
+      <section class="aanvraagformulier" id="aanvraagform">
         <h2>Aanvraag formulier</h2>
         <p>
           Met dit formulier schrijft u zich in op de wachtlijst voor een
           helpende hand bij huishuidelijke taken.
         </p>
 
-        <form action="/" method="POST" id="my-form">
+        <form action="/" method="POST" id="request-form">
           <!-- persoonlijke gegevens -->
           <fieldset class="persoonlijke-gegevens">
             <legend>Persoonlijke gegevens</legend>
@@ -498,8 +511,9 @@
 
                 <label for="voorwaarden">
                   Ik ga akkoord met de
-                  <a href="/">algemene voorwaarden</a> en de daarbijhorende
-                  <a href="/">privacy verklaring</a>.
+                  <a href="/algemenevoorwaarden.html">algemene voorwaarden</a>
+                  en de daarbijhorende
+                  <a href="/privacyverklaring.html">privacy verklaring</a>.
                 </label>
               </div>
             </div>
@@ -540,14 +554,15 @@
             </ul>
           </div>
 
-          <div class="sitemap">
+          <nav class="sitemap">
             <h4>Sitemap</h4>
-            <a href="/">Algemene voorwaarden</a>
-            <a href="/">Aanvraag formulier</a>
-            <a href="/">Contact formulier</a>
-            <a href="/">Privacy verklaring</a>
-            <a href="/">Veel gestelde vragen</a>
-          </div>
+            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/algemenevoorwaarden.html">Algemene voorwaarden</a>
+            <a href="#aanvraagform">Aanvraag formulier</a>
+            <p class="contactLink">Contact formulier</p>
+            <a href="/privacyverklaring.html">Privacy verklaring</a>
+            <!-- <a href="/faq.html">Veel gestelde vragen</a> -->
+          </nav>
         </article>
       </section>
     </footer>

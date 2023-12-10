@@ -206,6 +206,7 @@ button[type="submit"]:hover {
   filter: drop-shadow(0px 0px 2px #031d28);
 
   transition: filter 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   cursor: pointer;
 
   .st0 {
@@ -219,6 +220,7 @@ button[type="submit"]:hover {
 
 .closeform:hover {
   filter: drop-shadow(0px 0px 5px #031d28);
+  transform: rotate(90deg);
   .st0 {
     stroke: var(--secondairy);
   }
@@ -245,6 +247,16 @@ button[type="submit"]:hover {
 
 .cf-container {
   width: 80%;
+
+  & h4 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+  }
+
+  & img {
+    width: 7rem;
+    margin-top: 2rem;
+  }
 }
 
 .linebreaker {
