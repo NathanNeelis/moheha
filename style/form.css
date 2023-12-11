@@ -6,11 +6,20 @@
     var(--primairy) 0%,
     var(--secondairy) 100%
   );
-  color: white;
+  color: var(--white);
   padding: 2rem;
 
   & h2 {
-    color: white;
+    color: var(--white);
+  }
+
+  & h3 {
+    color: var(--white);
+    margin: 1rem 0 0 0;
+  }
+
+  & img {
+    width: 15rem;
   }
 
   & a {
@@ -79,9 +88,14 @@ textarea {
   font-family: var(--bodytext);
 }
 
-input[type="date"]:invalid::-webkit-datetime-edit {
-  color: var(--darkgray);
+input[type="date"]::-webkit-datetime-edit {
   font-family: var(--bodytext);
+  font-weight: 500;
+}
+
+input[type="date"]:invalid::-webkit-datetime-edit {
+  font-family: var(--bodytext);
+  color: var(--darkgray);
 }
 
 input[type="checkbox"] {
@@ -119,6 +133,7 @@ label {
 }
 
 button[type="submit"] {
+  display: flex;
   background-color: var(--secondairy);
   color: white;
   font-family: var(--headtext);
@@ -179,7 +194,7 @@ button[type="submit"]:hover {
   }
 
   & button[type="submit"] {
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
   }
   & form {
     margin: 0;
@@ -294,6 +309,49 @@ button[type="submit"]:hover {
       font-size: 1rem;
       line-height: 1.7rem;
     }
+  }
+}
+
+/* SPINNER  */
+.spinner-container,
+.cf-spinner-container {
+  display: none;
+}
+
+.activate-spinner,
+.cf-activate-spinner {
+  background-color: var(--secondairy);
+  width: 14rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 0;
+}
+
+.cf-activate-spinner {
+  border: 2px solid var(--white);
+  width: 12.8rem;
+  padding: 0.55rem 0;
+}
+
+.loader {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

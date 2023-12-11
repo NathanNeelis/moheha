@@ -34,26 +34,34 @@ closeBtn.addEventListener("click", function (e) {
   }
 });
 
-window.onload = function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      emailjs
-        .sendForm("service_fslm61g", "template_3nu2xbt", this)
-        .then(function (res) {
-          if (res.status === 200) {
-            console.log("email has been send");
-            emailConfirmation();
-          } else {
-            console.log("Failed to send the email");
-            console.log(res.status);
-            console.log(res.statusText);
-            errorHandling();
-          }
-        });
-    });
-};
+// send contact form functionality
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    loader();
+    emailjs
+      .sendForm("service_fslm61g", "template_3nu2xbt", this)
+      .then(function (res) {
+        if (res.status === 200) {
+          console.log("email has been send");
+          emailConfirmation();
+        } else {
+          console.log("Failed to send the email");
+          console.log(res.status);
+          console.log(res.statusText);
+          errorHandling();
+        }
+      });
+  });
+
+function loader() {
+  const sendBtn = document.getElementById("cf-send");
+  sendBtn.style.display = "none";
+
+  const spinner = document.querySelector(".cf-spinner-container");
+  spinner.classList.add("cf-activate-spinner");
+}
 
 function emailConfirmation() {
   let form = document.querySelector(".cf-container");

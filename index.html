@@ -101,9 +101,12 @@
               </fieldset>
 
               <button type="submit" name="cf-send" id="cf-send" value="cf-Send">
-                <!-- <button onclick="sendMail()" name="cf-send" id="cf-send"> -->
                 Verstuur bericht
               </button>
+
+              <div class="cf-spinner-container">
+                <span class="loader"></span>
+              </div>
             </form>
           </section>
 
@@ -232,7 +235,7 @@
         <article class="taken">
           <div class="taak huishoudelijk">
             <!-- icon  -->
-            <div class="taakicon active">
+            <div class="taakicon ti-huishoudelijk active">
               <svg
                 viewBox="0 0 150 150"
                 style="enable-background: new 0 0 150 150"
@@ -258,7 +261,7 @@
 
           <div class="taak tuinwerk">
             <!-- icon  -->
-            <div class="taakicon">
+            <div class="taakicon ti-tuinwerk">
               <svg
                 viewBox="0 0 150 150"
                 style="enable-background: new 0 0 150 150"
@@ -275,7 +278,7 @@
 
           <div class="taak koken">
             <!-- icon  -->
-            <div class="taakicon">
+            <div class="taakicon ti-koken">
               <svg
                 viewBox="0 0 150 150"
                 style="enable-background: new 0 0 150 150"
@@ -296,7 +299,7 @@
 
           <div class="taak persoonlijkcontact">
             <!-- icon  -->
-            <div class="taakicon">
+            <div class="taakicon ti-persoonlijkcontact">
               <svg
                 viewBox="0 0 150 150"
                 style="enable-background: new 0 0 150 150"
@@ -318,11 +321,13 @@
 
         <article class="beschrijving">
           <p class="werkzaamheden-beschrijving">
-            <span class="bold">Huishoudelijke taken</span>
-            zijn taken gericht op het beheren en onderhouden van een huishouden.
-            Bijvoorbeeld het schoonmaken van het huis, wassen en strijken van
-            kleding, stofzuigen, afstoffen, afwassen, boodschappen doen, en
-            algemene opruimtaken.
+            <span class="bold taskTitle">Huishoudelijke taken</span>
+            <span class="taskContent">
+              zijn taken gericht op het beheren en onderhouden van een
+              huishouden. Bijvoorbeeld het schoonmaken van het huis, wassen en
+              strijken van kleding, stofzuigen, afstoffen, afwassen,
+              boodschappen doen, en algemene opruimtaken.
+            </span>
           </p>
         </article>
       </section>
@@ -522,6 +527,9 @@
           <button type="submit" name="send" id="send" value="Send">
             Verstuur aanvraag
           </button>
+          <div class="spinner-container">
+            <span class="loader"></span>
+          </div>
         </form>
       </section>
     </main>
@@ -569,5 +577,7 @@
 
     <!-- SCRIPTS  -->
     <script src="js/contactform.js"></script>
+    <script src="js/requestform.js"></script>
+    <script src="js/tasks.js"></script>
   </body>
 </html>

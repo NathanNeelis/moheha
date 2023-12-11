@@ -114,9 +114,9 @@ ul {
 
   float: right;
   width: 7rem;
-  height: 11rem;
+  height: 13rem;
   margin: 0 0 0.5rem 1rem;
-  /* border-radius: 50%; */
+
   shape-outside: rect();
   background-color: var(--secondairy);
 }
@@ -233,7 +233,7 @@ ul {
   margin: 0.5rem auto 1.5rem auto;
   color: white;
 
-  & span {
+  & .bold {
     font-weight: 700;
   }
 }
@@ -438,7 +438,6 @@ ul {
   height: 3rem;
   position: absolute;
   left: 0;
-  /* background: green; */
   background-image: url("/images/email.svg");
   background-size: 45%;
   background-repeat: no-repeat;
@@ -634,6 +633,12 @@ footer {
         flex-direction: column;
         & img {
           transform: rotate(0deg);
+        }
+      }
+
+      & :last-child {
+        & h4 {
+          padding-top: 1rem;
         }
       }
     }
