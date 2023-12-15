@@ -214,18 +214,6 @@ ul {
   }
 }
 
-.taak:hover {
-  .taakicon {
-    background: var(--primairy);
-    border: 0.15rem solid var(--white);
-    filter: drop-shadow(0px 0px 7px #031d28);
-  }
-
-  .st2 {
-    fill: var(--white);
-  }
-}
-
 .beschrijving {
   display: flex;
   align-items: flex-start;
@@ -245,42 +233,22 @@ ul {
   .aanvragen-content {
     margin-bottom: 2rem;
   }
-
-  .aanvraagproces-illustratie {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 3rem;
-    position: relative;
-    margin: 4rem 0;
-
-    .step {
-      width: 8rem;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-
-      & img {
-        transform: rotate(90deg);
-      }
-    }
-
-    & h4 {
-      text-align: center;
-      line-height: 1.4rem;
-      font-size: 1.3rem;
-      color: var(--secondairy);
-    }
-  }
 }
 
-.aanvraagproces-illustratie::after {
+/* aanvraagproces alterantief  */
+.aanvraagproces {
+  margin: 2rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.aanvraagproces::after {
   content: "";
   width: 0.3rem;
-  height: 90%;
-  left: 3.75rem;
+  height: 85%;
+  left: 2.85rem;
+  top: 2.8rem;
 
   background-color: var(--lightgray);
   position: absolute;
@@ -288,65 +256,60 @@ ul {
   z-index: 1;
 }
 
-.step1,
-.step2,
-.step3,
-.step4 {
-  position: relative;
-}
+.stap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 0;
 
-.step4 {
-  & img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 87%;
-    margin-left: 6.5%;
+  & h4 {
+    padding-left: 1rem;
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+    color: var(--secondairy);
   }
 }
 
-.step1::after {
-  content: "";
-  width: 3.2rem;
-  height: 3.2rem;
-  position: absolute;
-  background-image: url("/images/stap1_icon.svg");
-  background-repeat: no-repeat;
-  top: 1.8rem;
-  left: 2.4rem;
+.ap-stap-container {
+  background: var(--lightgray);
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+
+  & img {
+    width: 3rem;
+  }
 }
 
-.step2::after {
-  content: "";
-  width: 3.2rem;
-  height: 3.2rem;
-  position: absolute;
-  background-image: url("/images/stap2_icon.svg");
-  background-repeat: no-repeat;
-  top: 1.8rem;
-  left: 2.4rem;
+.ap-stap-container-first {
+  background-color: var(--secondairy);
 }
 
-.step3::after {
+.ap-stap-container-first::after {
   content: "";
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
-  background-image: url("/images/stap3_icon.svg");
+  background-image: url("/images/pointer-blue.svg");
   background-repeat: no-repeat;
-  top: 1.6rem;
-  left: 2.4rem;
+  bottom: -1.7rem;
+  z-index: 2;
 }
 
-.step4::after {
+.ap-stap-container-mid::after {
   content: "";
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
-  background-image: url("/images/stap4_icon.svg");
+  background-image: url("/images/pointer.svg");
   background-repeat: no-repeat;
-  top: 1.8rem;
-  left: 2.4rem;
+  bottom: -1.7rem;
+  z-index: 2;
 }
 
 /* BUTTONS  */
@@ -618,53 +581,56 @@ footer {
     }
   }
 
+  .taak:hover {
+    .taakicon {
+      background: var(--primairy);
+      border: 0.15rem solid var(--white);
+      filter: drop-shadow(0px 0px 7px #031d28);
+    }
+
+    .st2 {
+      fill: var(--white);
+    }
+  }
+
   /* aanvragen  */
-  .aanvragen {
-    .aanvraagproces-illustratie {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 3rem;
-      position: relative;
-      margin: 4rem 0;
 
-      .step {
-        flex-direction: column;
-        & img {
-          transform: rotate(0deg);
-        }
-      }
+  .aanvraagproces {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-      & :last-child {
-        & h4 {
-          padding-top: 1rem;
-        }
-      }
-    }
+  .aanvraagproces::after {
+    height: 0.3rem;
+    width: 85%;
+    top: 5.25rem;
+    left: 4rem;
+  }
 
-    .aanvraagproces-illustratie::after {
-      content: "";
-      width: 90%;
-      height: 0.3rem;
-      bottom: 6.15rem;
+  .stap {
+    display: flex;
+    flex-direction: column;
+
+    & h4 {
+      padding-left: 0;
+      padding-top: 1.5rem;
     }
   }
 
-  .step1::after,
-  .step2::after {
-    top: 2.4rem;
-    left: 1.8rem;
+  .ap-stap-container {
+    width: 7rem;
+    height: 7rem;
+
+    & img {
+      width: 3.4rem;
+    }
   }
 
-  .step3::after {
-    top: 2rem;
-    left: 1.8rem;
-  }
-
-  .step4::after {
-    top: 1.8rem;
-    left: 2.6rem;
+  .ap-stap-container-first::after,
+  .ap-stap-container-mid::after {
+    top: 2.5rem;
+    right: -1.6rem;
+    transform: rotate(-90deg);
   }
 
   /* footer  */
