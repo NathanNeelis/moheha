@@ -128,6 +128,10 @@ label {
   flex-direction: column;
 }
 
+.pgb-container {
+  align-items: center;
+}
+
 .contact-details {
   margin: 3rem 0;
 }
