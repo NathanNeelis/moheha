@@ -30,7 +30,7 @@ huishoudelijk.addEventListener("click", function (event) {
   // create content
   taskTitle.innerHTML = "Huishoudelijke taken ";
   taskContent.innerHTML =
-    "zijn taken gericht op het beheren en onderhouden van een huishouden. Bijvoorbeeld het schoonmaken van het huis, wassen en strijken van kleding, stofzuigen, afstoffen, afwassen, boodschappen doen, en algemene opruimtaken.";
+    "zijn taken gericht op het beheren en onderhouden van een huishouden. Bijvoorbeeld het schoonmaken van het huis, wassen en strijken van kleding, stofzuigen, afstoffen, afwassen, boodschappen doen en algemene opruimtaken.";
 });
 
 // Tuinwerk taken

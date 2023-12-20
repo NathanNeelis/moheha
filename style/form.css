@@ -359,6 +359,10 @@ button[type="submit"]:hover {
   }
 }
 
+.spam {
+  padding-top: 1rem;
+}
+
 /* media queries  */
 @media all and (min-width: 50rem) {
   .aanvraagformulier {

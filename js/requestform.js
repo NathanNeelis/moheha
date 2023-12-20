@@ -50,9 +50,15 @@ function requestConfirmation() {
   succesText.innerHTML =
     "Moheha neemt binnen enkele dagen contact met u op ter bevestiging van uw aanvraag.";
 
+  const succesTextTwo = document.createElement("p");
+  succesTextTwo.innerHTML =
+    "Vergeet niet uw spambox te controleren. Voornamelijk @Hotmail en @Live accounts zijn hier vatbaar voor.";
+  succesTextTwo.classList.add("spam");
+
   requestForm.appendChild(topHeading);
   requestForm.appendChild(succesHeading);
   requestForm.appendChild(succesText);
+  requestForm.appendChild(succesTextTwo);
 
   requestForm.scrollIntoView({ block: "center" });
 }

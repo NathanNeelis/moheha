@@ -76,12 +76,19 @@ function emailConfirmation() {
   succesText.innerHTML =
     "Ik streef ernaar binnen enkele werkdagen te reageren.";
 
+  // Create P element
+  const succesTextTwo = document.createElement("p");
+  succesTextTwo.innerHTML =
+    "Vergeet niet uw spambox te controleren. Voornamelijk @Hotmail en @Live accounts zijn hier vatbaar voor.";
+  succesTextTwo.classList.add("spam");
+
   // Create IMG element
   const succesImage = document.createElement("img");
   succesImage.src = "images/mailbox.svg";
 
   form.appendChild(succesHeading);
   form.appendChild(succesText);
+  form.appendChild(succesTextTwo);
   form.appendChild(succesImage);
 }
 
